@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	var elMessage = document.createElement('div');
 	elMessage.id = 'help-message';
-	elMessage.innerHTML = '<div><img src="https://krownthemes.ghost.io/assets/forum/help.svg" alt="Get help!" /><h3>Didn\'t find what you were looking for?</h3><p>Our support staff is here to answer your queries, so don\'t hesitate to write to us!</p></div><a href="https://www.krownthemes.com/shopify-support-contact/" style="cursor:pointer;" class="ct-button">CONTACT US</a>';
+	elMessage.innerHTML = '<div><img src="https://rubenbristian.github.io/helpscout-assets/svg/help.svg" alt="Get help!" /><h3>Didn\'t find what you were looking for?</h3><p>Our support staff is here to answer your queries, so don\'t hesitate to write to us!</p></div><a href="https://www.krownthemes.com/shopify-support-contact/" style="cursor:pointer;" class="ct-button">CONTACT US</a>';
 
 	elContentArea.insertBefore(elMessage, document.getElementsByTagName('footer')[0]);
 

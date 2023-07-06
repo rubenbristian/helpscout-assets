@@ -678,6 +678,11 @@ body #mainNav .nav li.active a {
 	padding: 4px;
 	border: 1px solid #d8d8d8 !important;
 }
+#fullArticle iframe {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+}
 
 
 @media all and (max-width: 768px) {
@@ -793,10 +798,11 @@ body #mainNav .nav li.active a {
     display: none;
   }
   .navbar .brand {
-    width: 50px;
-    height: 50px;
+    width: 38px;
+    height: 28px;
     background-repeat: no-repeat;
-    background-size: 50px;
+    background-size: 38px 28px;
+    background-image: url(https://rubenbristian.github.io/helpscout-assets/img/logo-mobile.png);
   }
   .navbar .brand  img {
     display: none; 
