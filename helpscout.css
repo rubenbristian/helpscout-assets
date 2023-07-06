@@ -683,6 +683,9 @@ body #mainNav .nav li.active a:before {
 body #mainNav .nav li.active a:after {
     content: "Theme";
 }
+body #mainNav .nav li#shopify-basics.active a:after {
+  display: none;
+}
 
 
 #fullArticle pre, #fullArticle code {
