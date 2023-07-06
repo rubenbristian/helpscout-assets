@@ -654,17 +654,34 @@ body #mainNav .nav li.active {
   right: 0px;
 }
 body #mainNav .nav li.active a {
-  padding: 0;
-  position: absolute;
-  text-align: center;
-  top: 90px;
-  right: 612px;
-  z-index: 99;
-  font-size: 40px;
-  color: #161616 !important;
-  background: transparent !important;
-  font-weight: 500;
-  transition: none !important;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    transform: translateX(100%);
+    top: 90px;
+    margin-right: -70px;
+    right: 777px;
+    z-index: 99;
+    font-size: 40px;
+    color: #161616 !important;
+    background: transparent !important;
+    font-weight: 500;
+    transition: none !important;
+    width: max-content !important;
+    display: block;
+}
+body #mainNav .nav li.active a:before {
+    background: yellow;
+    width: 100%;
+    height: 20px;
+    bottom: 0px;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transform: skew(334deg, 358deg);
+}
+body #mainNav .nav li.active a:after {
+    content: "Theme";
 }
 
 
@@ -684,6 +701,12 @@ body #mainNav .nav li.active a {
   aspect-ratio: 16 / 9;
 }
 
+@media all and (max-width: 1200px) {
+  body #mainNav .nav li.active a {
+    right: 75vw;
+    margin-right: -180px;
+  }
+}
 
 @media all and (max-width: 768px) {
 
@@ -787,8 +810,14 @@ body #mainNav .nav li.active a {
   }
 
   body #mainNav .nav li.active a {
-    top: 0;
-    right: calc(100vw - 90px) !important;
+    top: 5px;
+    right: 100vw;
+    margin-right: -70px;
+    font-size:  30px;
+  }
+  body #mainNav .nav li.active a:before {
+    height: 10px;
+    bottom: 15px;
   }
 
 }
@@ -798,6 +827,7 @@ body #mainNav .nav li.active a {
     display: none;
   }
   .navbar .brand {
+    top:  5px;
     width: 38px;
     height: 28px;
     background-repeat: no-repeat;
@@ -815,7 +845,7 @@ body #mainNav .nav li.active a {
     display: none;
   }
   body #mainNav .nav li.active a {
-    right: calc(100vw - 47px) !important;
+    margin-right:  -60px;
   }
   .articleFoot {
     display: none;
@@ -864,13 +894,6 @@ body #mainNav .nav li.active a {
   #serp-dd {
     top: 36px;
     width: calc(100% - 30px);
-  }
-}
-
-@media all and (max-width: 1200px) {
-  body #mainNav .nav li.active a {
-    right: 55vw;
-    transform: translateX(100%);
   }
 }
 
