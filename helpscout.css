@@ -918,3 +918,8 @@ body #mainNav .nav li#shopify-basics.active a:after {
 .articleList {
   list-style: none !important;
 }
+
+div[class*=callout] p {
+  font-size: 16px !important;
+  padding-top: 7px;
+}
