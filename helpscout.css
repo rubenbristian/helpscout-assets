@@ -1,6 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;500&family=Work+Sans:wght@600&display=swap');
-
 #contentArea *, #mainNav * {
 	-webkit-transition: all 200ms linear;
 	transition: all 200ms linear;
@@ -8,11 +6,9 @@
 
 
 h1, h2, h3, h4, h5, #fullArticle blockquote {
-	font-family: 'Roboto', Helvetica, Arial, sans-serif;
 	font-weight: 500;
 }
 body, input, textarea {
-	font-family: 'Roboto', Helvetica, Arial, sans-serif;
 	font-weight: 400;
 }
 
@@ -192,7 +188,7 @@ ul li ul, ul li ol, ol li ol, ol li ul {
   background: transparent !important;
 }
 .article-count {
-	color: #ddd !important;
+	color: #b4b4b4 !important;
 }
 #contactModal h2 {
 	font-size: 19px;
@@ -409,7 +405,6 @@ footer {
 }
 
 code, pre {
-	font-family: 'Roboto Mono', monospace;
 }
 
 #sidebar #searchBar .search-query {
@@ -502,7 +497,6 @@ code, pre {
   height: 46px;
   font-size: 14px;
   line-height: 24px;
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
   color: #979797;
   padding: 0 22px;
   width: 180px;
@@ -531,6 +525,7 @@ code, pre {
   line-height: 1;
   padding: 10px 0px;
   display: block;
+  color: #000;
 }
 .articleList a:hover {
   font-weight: 500;
@@ -610,7 +605,6 @@ code, pre {
   font-size: 14px;
   padding: 18px 25px;
   margin-top: 16px;
-  font-family: 'Work Sans';
   font-weight: 600;
   text-transform: uppercase;
   border-radius: 45px;
@@ -642,7 +636,6 @@ code, pre {
   margin-top: 60px;
   box-shadow: none;
 }.articleFoot p, .articleFoot time {
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
   font-style: normal;
 }
 
@@ -922,4 +915,15 @@ body #mainNav .nav li#shopify-basics.active a:after {
 div[class*=callout] p {
   font-size: 16px !important;
   padding-top: 7px;
+}
+#fullArticle h2 + h3 {
+  margin-top: -14px;
+}
+#fullArticle a {
+  border-bottom: 1px solid;
+  color: #000;
+  font-weight: 600;
+}
+#fullArticle {
+  font-family: ;
 }
