@@ -365,18 +365,6 @@ footer {
   top: 3px;
   margin: 0;
 }
-.category-list .category[href*='getting-started'] h3:before {
-  background-image: url(https://rubenbristian.github.io/helpscout-assets/svg/getting-started.svg);
-}
-.category-list .category[href*='customizations'] h3:before {
-  background-image: url(https://rubenbristian.github.io/helpscout-assets/svg/customizations.svg);
-}
-.category-list .category[href*='changelog'] h3:before {
-  background-image: url(https://rubenbristian.github.io/helpscout-assets/svg/changelog.svg);
-}
-.category-list .category[href*='faq'] h3:before {
-  background-image: url(https://rubenbristian.github.io/helpscout-assets/svg/faq.svg);
-}
 
 .category-list p {
   font-size: 14px;
