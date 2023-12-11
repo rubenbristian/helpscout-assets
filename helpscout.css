@@ -74,7 +74,6 @@ ul li ul, ul li ol, ol li ol, ol li ul {
   border-radius: 45px !important;
   padding: 0 !important;
   transition: all 200ms linear !important;
-  font-family: 'Work Sans', Helvetica, Arial, sans-serif;
   font-weight: 600 !important;
   font-size: 14px !important;
   letter-spacing: 0.01em;
@@ -155,7 +154,6 @@ ul li ul, ul li ol, ol li ol, ol li ul {
   height: 70px;
   background: #f7f7f7 !important;
   border-radius: 0 45px 45px 0;
-  font-family: 'Work Sans', Helvetica, Arial, sans-serif;
   font-weight: 600;
   width: 240px;
   font-size: 24px;
@@ -924,25 +922,65 @@ div[class*=callout] p {
   color: #000;
   font-weight: 600;
 }
-#fullArticle {
-  font-family: ;
-}
 
-.category-list .category[href*='theme-settings'] h3:before {
-  background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/theme-settings.png);
+#collection-category-582 .category-list {
+  grid-template-areas: ". ."
 }
-.category-list .category[href*='header-footer'] h3:before {
-  background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/header-footer.png);
+#collection-category-582 .category-list:before {
+  display: none;
 }
-.category-list .category[href*='products'] h3:before {
-  background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/grid.png);
+.category-list {
+    display: grid;
+    grid-template-areas:
+        "image ."
+        "image ."
+        "image .";
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    grid-gap: 20px;
 }
-.category-list .category[href*='sections'] h3:before {
-  background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/pages.png);
+@media screen and (max-width: 860px) {
+  .category-list {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "image"
+      "."
+  }
+  .category-list:before {
+    height: 200px;
+  }
 }
-.category-list .category[href*='apps'] h3:before {
-  background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/app.png);
+.category-list .category {
+    margin: 0 !important;
+    float: none;
+    width: 100% !important;
 }
-.category-list .category[href*='faq'] h3:before {
-  background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/faq.png);
+.category-list:before {
+  grid-area: image;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: right;
+  content: "";
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 80%;
+}
+.category-list:after {
+  display: none;  
+}
+#collection-category-632 .category-list:before {
+  background-image: url('https://rubenbristian.github.io/helpscout-assets/img/local_hero_1080.jpg');
+}
+#collection-category-550 .category-list:before {
+  background-image: url('https://rubenbristian.github.io/helpscout-assets/img/highlight_hero_1080.jpg');
+}
+#collection-category-370 .category-list:before {
+  background-image: url('https://rubenbristian.github.io/helpscout-assets/img/split_hero_1080.jpg');
+}
+#collection-category-463 .category-list:before {
+  background-image: url('https://rubenbristian.github.io/helpscout-assets/img/kingdom_hero_1080.jpg');
+}
+#collection-category-657 .category-list:before {
+  background-image: url('https://rubenbristian.github.io/helpscout-assets/img/combine_hero_1080.jpg');
 }
