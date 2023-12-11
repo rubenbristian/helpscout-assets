@@ -927,3 +927,20 @@ div[class*=callout] p {
 #fullArticle {
   font-family: ;
 }
+
+.category-list .category[href*='theme-settings'] h3:before {
+  background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/theme-settings.png);
+}
+.category-list .category[href*='header-footer'] h3:before {
+  background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/header-footer.png);
+}
+.category-list .category[href*='products'] h3:before {
+  background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/grid.png);
+}
+.category-list .category[href*='sections'] h3:before {
+  background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/pages.png);
+}
+
+.category-list .category[href*='apps'] h3:before {
+  background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/app.png);
+}
