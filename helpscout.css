@@ -984,3 +984,22 @@ div[class*=callout] p {
 #collection-category-657 .category-list:before {
   background-image: url('https://rubenbristian.github.io/helpscout-assets/img/combine_hero_1080.jpg');
 }
+
+.category-list .category[href*='theme-settings'] h3:before {
+  background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/theme-settings.png);
+}
+.category-list .category[href*='header-footer'] h3:before {
+  background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/header-footer.png);
+}
+.category-list .category[href*='products'] h3:before {
+  background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/grid.png);
+}
+.category-list .category[href*='sections'] h3:before {
+  background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/pages.png);
+}
+.category-list .category[href*='apps'] h3:before {
+  background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/app.png);
+}
+.category-list .category[href*='faq'] h3:before {
+  background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/faq.png);
+}
