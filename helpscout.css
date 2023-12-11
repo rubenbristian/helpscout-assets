@@ -940,7 +940,9 @@ div[class*=callout] p {
 .category-list .category[href*='sections'] h3:before {
   background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/pages.png);
 }
-
 .category-list .category[href*='apps'] h3:before {
   background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/app.png);
+}
+.category-list .category[href*='faq'] h3:before {
+  background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/faq.png);
 }
