@@ -911,8 +911,10 @@ div[class*=callout] p {
   font-weight: 600;
 }
 
-#collection-category-582 .category-list {
-  grid-template-areas: ". ."
+@media screen and (min-width: 861px) {
+  #collection-category-582 .category-list {
+    grid-template-areas: ". ."
+  }
 }
 #collection-category-582 .category-list:before {
   display: none;
