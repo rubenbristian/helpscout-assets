@@ -931,19 +931,21 @@ div[class*=callout] p {
     align-items: stretch;
     grid-gap: 20px;
 }
-#collection-category-370 .category-list {
-  grid-template-areas:
-  "image ."
-  "image ."
-  "image ."
-  "image .";
-}
-#collection-category-463 .category-list,
-#collection-category-550 .category-list {
-  grid-template-areas:
-  "image ."
-  "image ."
-  "image .";
+@media screen and (min-width: 861px) {
+  #collection-category-370 .category-list {
+    grid-template-areas:
+    "image ."
+    "image ."
+    "image ."
+    "image .";
+  }
+  #collection-category-463 .category-list,
+  #collection-category-550 .category-list {
+    grid-template-areas:
+    "image ."
+    "image ."
+    "image .";
+  }
 }
 @media screen and (max-width: 860px) {
   .category-list {
