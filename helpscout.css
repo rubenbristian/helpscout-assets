@@ -1018,3 +1018,11 @@ div[class*=callout] p {
 .category-list .category[href*='video'] h3:before {
   background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/video.png);
 }
+
+#Get-the-latest--greatest-with-one-click-theme-updates-5gPKu ~ p a {
+  border-radius: 3px;
+  background: #000;
+  padding: 11px 15px;
+  display: inline-block;
+  color: #fff;
+}
