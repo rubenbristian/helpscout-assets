@@ -973,6 +973,7 @@ div[class*=callout] p {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 80%;
+  max-height: 380px;
 }
 .category-list:after {
   display: none;  
@@ -1002,7 +1003,7 @@ div[class*=callout] p {
 .category-list .category[href*='header-footer'] h3:before {
   background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/header-footer.png);
 }
-.category-list .category[href*='products'] h3:before {
+.category-list .category[href*='product'] h3:before {
   background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/grid.png);
 }
 .category-list .category[href*='sections'] h3:before {
@@ -1016,4 +1017,12 @@ div[class*=callout] p {
 }
 .category-list .category[href*='video'] h3:before {
   background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/video.png);
+}
+
+#Get-the-latest--greatest-with-one-click-theme-updates-5gPKu ~ p a {
+  border-radius: 3px;
+  background: #000;
+  padding: 11px 15px;
+  display: inline-block;
+  color: #fff;
 }
