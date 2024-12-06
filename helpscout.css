@@ -1019,7 +1019,8 @@ div[class*=callout] p {
   background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/video.png);
 }
 
-#Get-the-latest--greatest-with-one-click-theme-updates-5gPKu ~ p a {
+#Get-the-latest--greatest-with-one-click-theme-updates-5gPKu ~ p a,
+#Assign-multiple-images-for-unique-variants-lBNRx ~ p a {
   border-radius: 3px;
   background: #000;
   padding: 11px 15px;
