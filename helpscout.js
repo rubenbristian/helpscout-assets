@@ -24,4 +24,50 @@ document.addEventListener('DOMContentLoaded', function() {
 	var elNav = document.getElementsByClassName('nav')[0];
 	elNav.insertBefore(elLink, elNav.firstChild);
 
+
+	// TOC start
+	if (!window.location.href.includes("category")) return; // no toc on homepage
+
+	const sidebar = document.getElementById("sidebar");
+	if (!sidebar) return; // no sidebar, no toc
+
+	const toc = document.createElement("nav");
+	toc.id = "toc";
+	
+	const tocTitle = document.createElement("h3");
+	tocTitle.textContent = "Table of contents";
+	toc.appendChild(tocTitle);
+	
+	const tocList = document.createElement("ul");
+	tocList.classList.add("nav", "nav-list");
+
+	const headings = document.querySelectorAll("h2");
+	headings.forEach((heading, index) => {
+		if (!heading.id) {
+			heading.id = "section-" + index;
+		}
+
+		const tocItem = document.createElement("li");
+		const tocLink = document.createElement("a");
+		tocLink.href = "#" + heading.id;
+		tocLink.textContent = heading.textContent;
+		
+		tocLink.addEventListener("click", function(event) {
+			event.preventDefault();
+			document.querySelector(tocLink.getAttribute("href")).scrollIntoView({
+				behavior: "smooth",
+				block: "start"
+			});
+		});
+
+		tocItem.appendChild(tocLink);
+		tocList.appendChild(tocItem);
+	});
+
+	toc.appendChild(tocList);
+	sidebar.appendChild(toc);
+
+	document.documentElement.style.scrollBehavior = "smooth";
+	// TOC end
+
 });
