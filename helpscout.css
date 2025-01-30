@@ -1041,11 +1041,11 @@ div[class*=callout] p {
   margin-top: 0;
   line-height: 1.2;
   font-size: 12px;
-  margin-bottom: 5px;
+  margin-bottom: 14px;
 }
 
 #toc ul {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 #toc .nav-list li {
@@ -1055,6 +1055,7 @@ div[class*=callout] p {
 
 #toc .nav-list a {
   font-size: 14px;
+  padding: 0;
   margin-bottom: 0 !important;
 }
 
