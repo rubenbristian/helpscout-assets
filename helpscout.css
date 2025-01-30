@@ -388,6 +388,8 @@ footer {
 }
 #sidebar {
 	margin-top: 70px;
+  position: sticky;
+  top:0;
 }
 
 code, pre {
