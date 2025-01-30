@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
   toc.id = "toc";
   
   const tocTitle = document.createElement("h3");
-  tocTitle.textContent = "Table of contents";
+  tocTitle.textContent = "On this page";
   toc.appendChild(tocTitle);
   
   const tocList = document.createElement("ul");
