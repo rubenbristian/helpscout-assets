@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 	// TOC start
-	if (!window.location.href.includes("category")) return; // no toc on homepage
+	if (!window.location.href.includes("article")) return; // no toc on homepage
 
 	const sidebar = document.getElementById("sidebar");
 	if (!sidebar) return; // no sidebar, no toc
