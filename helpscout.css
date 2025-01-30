@@ -1029,3 +1029,24 @@ div[class*=callout] p {
   display: inline-block;
   color: #fff;
 }
+
+
+/* TOC */
+#toc {
+  padding: 15px;
+  border: dashed 1px #eaeaea;
+}
+
+#toc h3 {
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+#toc ul {
+  margin-bottom: 0;
+}
+
+#toc .nav-list a {
+  font-size: 14px;
+  margin-bottom: 0;
+}
