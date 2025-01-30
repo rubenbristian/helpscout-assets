@@ -1034,19 +1034,30 @@ div[class*=callout] p {
 /* TOC */
 #toc {
   padding: 15px;
-  border: dashed 1px #eaeaea;
+  border: dashed 1px #bdb9b9;
 }
 
 #toc h3 {
   margin-top: 0;
   line-height: 1.2;
+  font-size: 12px;
+  margin-bottom: 5px;
 }
 
 #toc ul {
   margin-bottom: 0;
 }
 
+#toc .nav-list li {
+  margin: 0 !important;
+  padding: 4px 0 4px;
+}
+
 #toc .nav-list a {
   font-size: 14px;
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
+}
+
+#toc .nav-list a:hover {
+  background-color: rgba(255, 255, 0, 0.2);
 }
