@@ -69,6 +69,20 @@ document.addEventListener('DOMContentLoaded', function() {
   toc.appendChild(tocList);
   sidebar.appendChild(toc);
 
+  const goToToc = document.createElement("a");
+  goToToc.href = "#toc";
+  goToToc.textContent = "Go to TOC";
+  goToToc.classList.add("go-to-toc");
+  goToToc.addEventListener("click", function(event) {
+    event.preventDefault();
+    document.getElementById("toc").scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  });
+
+  document.body.prepend(goToToc);
+
   document.documentElement.style.scrollBehavior = "smooth";
 	// TOC end
 
