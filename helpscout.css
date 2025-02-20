@@ -1050,6 +1050,10 @@ div[class*=callout] p {
   border-radius: 10px;
 }
 
+.go-to-toc:focus {
+  color: white;
+}
+
 
 @media all and (min-width: 768px) {
   #toc {
