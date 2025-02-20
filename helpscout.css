@@ -1035,10 +1035,16 @@ div[class*=callout] p {
 #toc {
   padding: 15px;
   border: dashed 1px #bdb9b9;
-  max-height: calc(100vh - 460px);
-  overflow: auto;
-  scrollbar-width: thin;
 }
+
+@media all and (min-width: 768px) {
+  #toc {
+    max-height: calc(100vh - 460px);
+    overflow: auto;
+    scrollbar-width: thin;
+  }
+}
+
 
 #toc h3 {
   margin-top: 0;
