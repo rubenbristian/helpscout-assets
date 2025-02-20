@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const goToToc = document.createElement("a");
   goToToc.href = "#toc";
-  goToToc.textContent = "Go to TOC";
+  goToToc.textContent = "Scroll to TOC";
   goToToc.classList.add("go-to-toc");
   goToToc.addEventListener("click", function(event) {
     event.preventDefault();

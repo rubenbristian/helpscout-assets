@@ -1036,12 +1036,28 @@ div[class*=callout] p {
   padding: 15px;
   border: dashed 1px #bdb9b9;
 }
+.go-to-toc {
+  display:none;
+}
 
 @media all and (min-width: 768px) {
   #toc {
     max-height: calc(100vh - 460px);
     overflow: auto;
     scrollbar-width: thin;
+  }
+
+  .go-to-toc {
+    position: fixed;
+    display: inline-block;
+    background: black;
+    color: white;
+    padding: 4px 10px;
+    right: 10px;
+    z-index: 99;
+    top: 125px;
+    font-size: 11px;
+    border-radius: 10px;
   }
 }
 
