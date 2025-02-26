@@ -95,6 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   paragraphs.forEach((paragraph) => {
     const img = paragraph.querySelector("img");
+    console.log("img width is: ", img.width);
     if (img && img.width < 300) {
       if (!galleryWrapper) {
         galleryWrapper = document.createElement("div");
