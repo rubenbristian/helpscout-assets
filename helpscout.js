@@ -29,26 +29,22 @@ document.addEventListener('DOMContentLoaded', function() {
   const fullArticle = document.getElementById("fullArticle");
   // if (!fullArticle) return;
 
-  const paragraphs = fullArticle.querySelectorAll("p");
+  const figures = fullArticle.querySelectorAll("figure");
   let galleryWrapper = null;
 
-  paragraphs.forEach((paragraph) => {
-    const img = paragraph.querySelector("img");
-    if (img) {
-      console.log("image W: ", img.width)
-      const widthMatch = img.getAttribute("style")?.match(/width:\s*(\d+)px/);
-      const imgWidth = widthMatch ? parseInt(widthMatch[1], 10) : null;
-      
-      if (imgWidth !== null && imgWidth < 300) {
-        if (!galleryWrapper) {
-          galleryWrapper = document.createElement("div");
-          galleryWrapper.id = "krown-gallery";
-          paragraph.before(galleryWrapper);
-        }
-        galleryWrapper.appendChild(paragraph);
-      } else {
-        galleryWrapper = null;
+  figures.forEach((figure) => {
+    const widthMatch = figure.getAttribute("style")?.match(/width:\s*(\d+)px/);
+    const figureWidth = widthMatch ? parseInt(widthMatch[1], 10) : null;
+    
+    if (figureWidth !== null && figureWidth < 300) {
+      if (!galleryWrapper) {
+        galleryWrapper = document.createElement("div");
+        galleryWrapper.id = "krown-gallery";
+        figure.before(galleryWrapper);
       }
+      galleryWrapper.appendChild(figure);
+    } else {
+      galleryWrapper = null;
     }
   });
   // Krown gallery end
