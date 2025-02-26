@@ -1073,6 +1073,12 @@ div[class*=callout] p {
   }
 }
 
+@media all and (max-width: 768px) {
+  #krown-gallery figure {
+    width: 100% !important;
+  }
+}
+
 #toc h3 {
   margin-top: 0;
   line-height: 1.2;
