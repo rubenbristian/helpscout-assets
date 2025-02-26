@@ -34,16 +34,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
   paragraphs.forEach((paragraph) => {
     const img = paragraph.querySelector("img");
-    console.log("img width is: ", img.width);
-    if (img && img.width < 300) {
-      if (!galleryWrapper) {
-        galleryWrapper = document.createElement("div");
-        galleryWrapper.id = "krown-gallery";
-        paragraph.before(galleryWrapper);
+    if (img) {
+      console.log("image W: ", img.width)
+      const widthMatch = img.getAttribute("style")?.match(/width:\s*(\d+)px/);
+      const imgWidth = widthMatch ? parseInt(widthMatch[1], 10) : null;
+      
+      if (imgWidth !== null && imgWidth < 300) {
+        if (!galleryWrapper) {
+          galleryWrapper = document.createElement("div");
+          galleryWrapper.id = "krown-gallery";
+          paragraph.before(galleryWrapper);
+        }
+        galleryWrapper.appendChild(paragraph);
+      } else {
+        galleryWrapper = null;
       }
-      galleryWrapper.appendChild(paragraph);
-    } else {
-      galleryWrapper = null;
     }
   });
   // Krown gallery end
