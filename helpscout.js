@@ -25,6 +25,30 @@ document.addEventListener('DOMContentLoaded', function() {
 	elNav.insertBefore(elLink, elNav.firstChild);
 
 
+  // Krown gallery start - search for more than 2 p siblings containing images with size set to a value smaller than 340px and wrapps them in a block element (the rest is css)
+  const fullArticle = document.getElementById("fullArticle");
+  // if (!fullArticle) return;
+
+  const paragraphs = fullArticle.querySelectorAll("p");
+  let galleryWrapper = null;
+
+  paragraphs.forEach((paragraph) => {
+    const img = paragraph.querySelector("img");
+    console.log("img width is: ", img.width);
+    if (img && img.width < 300) {
+      if (!galleryWrapper) {
+        galleryWrapper = document.createElement("div");
+        galleryWrapper.id = "krown-gallery";
+        paragraph.before(galleryWrapper);
+      }
+      galleryWrapper.appendChild(paragraph);
+    } else {
+      galleryWrapper = null;
+    }
+  });
+  // Krown gallery end
+
+
 	// TOC start
   if (!window.location.href.includes("article")) return; // only do toc on article pages
 
@@ -85,28 +109,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.documentElement.style.scrollBehavior = "smooth";
 	// TOC end
-
-  // Krown gallery start - search for more than 2 p siblings containing images with size set to a value smaller than 340px and wrapps them in a block element (the rest is css)
-  const fullArticle = document.getElementById("fullArticle");
-  if (!fullArticle) return;
-
-  const paragraphs = fullArticle.querySelectorAll("p");
-  let galleryWrapper = null;
-
-  paragraphs.forEach((paragraph) => {
-    const img = paragraph.querySelector("img");
-    console.log("img width is: ", img.width);
-    if (img && img.width < 300) {
-      if (!galleryWrapper) {
-        galleryWrapper = document.createElement("div");
-        galleryWrapper.id = "krown-gallery";
-        paragraph.before(galleryWrapper);
-      }
-      galleryWrapper.appendChild(paragraph);
-    } else {
-      galleryWrapper = null;
-    }
-  });
-  // Krown gallery end
 
 });
