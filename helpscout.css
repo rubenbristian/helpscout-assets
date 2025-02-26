@@ -1066,7 +1066,7 @@ div[class*=callout] p {
     display:none;
   }
 
-  #krown-gallery {
+  .krown-gallery {
     display: flex;
     gap: 20px;
     justify-content: space-evenly;
@@ -1074,7 +1074,7 @@ div[class*=callout] p {
 }
 
 @media all and (max-width: 768px) {
-  #krown-gallery figure {
+  .krown-gallery figure {
     width: 100% !important;
   }
 }
