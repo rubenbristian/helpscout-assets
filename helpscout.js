@@ -32,17 +32,22 @@ document.addEventListener('DOMContentLoaded', function() {
   const figures = fullArticle.querySelectorAll("figure");
   let galleryWrapper = null;
 
-  figures.forEach((figure) => {
+  figures.forEach((figure, index) => {
     const widthMatch = figure.getAttribute("style")?.match(/width:\s*(\d+)px/);
     const figureWidth = widthMatch ? parseInt(widthMatch[1], 10) : null;
+    const nextElement = figure.nextElementSibling;
     
     if (figureWidth !== null && figureWidth < 300) {
       if (!galleryWrapper) {
         galleryWrapper = document.createElement("div");
-        galleryWrapper.id = "krown-gallery";
+        galleryWrapper.classList.add("krown-gallery");
         figure.before(galleryWrapper);
       }
       galleryWrapper.appendChild(figure);
+
+      if (!nextElement || nextElement.tagName !== "FIGURE") {
+        galleryWrapper = null;
+      }
     } else {
       galleryWrapper = null;
     }
