@@ -1065,6 +1065,12 @@ div[class*=callout] p {
   .go-to-toc {
     display:none;
   }
+
+  #krown-gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+  }
 }
 
 #toc h3 {
