@@ -31,6 +31,10 @@ ul li ul, ul li ol, ol li ol, ol li ul {
   position: relative;
   width: 180px;
 }
+.navbar .brand img {
+  width: 175px;
+  height: 33px;
+}
 .navbar .navbar-inner {
 	background: #161616;
 	box-shadow: none;
