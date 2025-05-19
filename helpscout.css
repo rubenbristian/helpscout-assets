@@ -101,14 +101,14 @@ ul li ul, ul li ol, ol li ol, ol li ul {
   font-weight: 400;
   position: relative;
   max-width: 1180px;
-  width: calc(100% - 120px);
+  width: calc(100% - 96px);
   margin: 90px auto 40px;
   font-size: 40px;
   line-height: 44px;
   text-align: left;
 }
 #searchBar {
-  width: calc(100% - 120px);
+  width: calc(100% - 96px);
 	max-width: 1180px;
 	padding: 0;
 	margin: 0 auto 80px;
@@ -167,7 +167,7 @@ ul li ul, ul li ol, ol li ol, ol li ul {
   margin-top: 20px;
   max-width: 718px;
   padding: 40px 30px 40px 0;;
-  border-radius: 45px;
+  border-radius: 10px;
   min-height: 70px;
 }
 #serp-dd .result {
@@ -199,7 +199,7 @@ ul li ul, ul li ol, ol li ol, ol li ul {
 
 .container-fluid {
   max-width: 1180px;
-  width: calc(100% - 120px);
+  width: calc(100% - 96px);
 }
 #contentArea {
   width: 100%;
@@ -210,13 +210,13 @@ ul li ul, ul li ol, ol li ol, ol li ul {
 }
 #contentArea > .row-fluid {
 	max-width: 1180px;
-  width: calc(100% - 120px);
+  width: calc(100% - 96px);
 	margin: auto;
 }
 
 footer {
   max-width: 1180px;
-  width: calc(100% - 120px);
+  width: calc(100% - 96px);
   margin: 80px auto 50px;
 }
 
@@ -227,7 +227,7 @@ footer {
   box-sizing: border-box;
   border-radius: 10px;
 	max-width: 1180px;
-  width: calc(100% - 120px);
+  width: calc(100% - 96px);
 	margin: auto;
 	margin-top: 100px;
   display: flex;
@@ -300,7 +300,7 @@ footer {
 .collection-category {
   max-width: 1180px;
   margin: auto;
-  width: calc(100% - 120px);
+  width: calc(100% - 96px);
   margin-top: 80px;
 }
 .collection-category .category-list {
