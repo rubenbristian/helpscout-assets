@@ -29,7 +29,7 @@ ul li ul, ul li ol, ol li ol, ol li ul {
 	padding: 0;
   z-index: 999;
   position: relative;
-  width: 187px;
+  width: 180px;
 }
 .navbar .navbar-inner {
 	background: #161616;
@@ -100,7 +100,7 @@ ul li ul, ul li ol, ol li ol, ol li ul {
   color: #f4f4f4;
   font-weight: 400;
   position: relative;
-  max-width: 1080px;
+  max-width: 1180px;
   width: calc(100% - 120px);
   margin: 90px auto 40px;
   font-size: 40px;
@@ -109,7 +109,7 @@ ul li ul, ul li ol, ol li ol, ol li ul {
 }
 #searchBar {
   width: calc(100% - 120px);
-	max-width: 1080px;
+	max-width: 1180px;
 	padding: 0;
 	margin: 0 auto 80px;
 	text-align: left;
@@ -198,7 +198,7 @@ ul li ul, ul li ol, ol li ol, ol li ul {
 /* General structure */
 
 .container-fluid {
-  max-width: 1080px;
+  max-width: 1180px;
   width: calc(100% - 120px);
 }
 #contentArea {
@@ -209,13 +209,13 @@ ul li ul, ul li ol, ol li ol, ol li ul {
   flex-direction: column;
 }
 #contentArea > .row-fluid {
-	max-width: 1080px;
+	max-width: 1180px;
   width: calc(100% - 120px);
 	margin: auto;
 }
 
 footer {
-  max-width: 1080px;
+  max-width: 1180px;
   width: calc(100% - 120px);
   margin: 80px auto 50px;
 }
@@ -226,7 +226,7 @@ footer {
   padding: 50px 60px;
   box-sizing: border-box;
   border-radius: 10px;
-	max-width: 1080px;
+	max-width: 1180px;
   width: calc(100% - 120px);
 	margin: auto;
 	margin-top: 100px;
@@ -275,7 +275,7 @@ footer {
   box-sizing: border-box;
 }
 #welcome > div {
-  max-width: 1080px;
+  max-width: 1180px;
   width: 100%;
   margin: auto;
   font-size: 16px;
@@ -298,7 +298,7 @@ footer {
 }
 
 .collection-category {
-  max-width: 1080px;
+  max-width: 1180px;
   margin: auto;
   width: calc(100% - 120px);
   margin-top: 80px;
