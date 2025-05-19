@@ -554,7 +554,7 @@ code, pre {
 }
 
 #fullArticle li {
-	margin-bottom: 18px;
+	margin-bottom: 10px;
 }
 #fullArticle li ol {
 	margin-top: 18px;
@@ -928,6 +928,7 @@ div[class*=callout] p {
         "image ."
         "image ."
         "image ."
+        "image ."
         "image .";
     grid-template-columns: 1fr 1fr;
     align-items: stretch;
@@ -1103,4 +1104,15 @@ div[class*=callout] p {
 
 #toc .nav-list a:hover {
   background-color: rgba(255, 255, 0, 0.2);
+}
+
+@media screen and (min-width: 861px) {
+  .collection-category h2 {
+    position: sticky;
+    top: 20px;
+  }
+  .category-list:before {
+    position: sticky;
+    top: 75px;
+  }
 }
