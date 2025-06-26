@@ -1,6 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
 
 	var elContentArea = document.getElementById('contentArea');
+  
+  // Add preset names
+
+  const local = document.getElementById('collection-632');
+  local.querySelector('a').innerHTML = `${local.querySelector('a').innerHTML} theme collection`;
+  const localPresets = document.createElement('span');
+  localPresets.classList.add('preset-names');
+  localPresets.innerHTML = ' Including poresets: Local, Soleway, Caffeine, Lively';
+  local.appendChild(localPresets);
+
+  // continue with homepage  
 
 	if ( document.location.pathname == '/' ) {
 
@@ -23,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	var elNav = document.getElementsByClassName('nav')[0];
 	elNav.insertBefore(elLink, elNav.firstChild);
-
 
   // Krown gallery start - search for more than 2 p siblings containing images with size set to a value smaller than 340px and wrapps them in a block element (the rest is css)
   const fullArticle = document.getElementById("fullArticle");
