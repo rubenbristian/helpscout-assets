@@ -68,6 +68,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   }
 
+  document.querySelector('#main-content').insertBefore(collectionPageDom, document.querySelector('#main-content').firstChild);
+
   // continue with homepage  
 
 	if ( document.location.pathname == '/' ) {
