@@ -1158,5 +1158,24 @@ div[class*=callout] p {
   .page-banner-title {
     position: relative;
     width: 100%;
+    margin-top: 20px;
   }
+  .contentWrapper {
+    margin-top: -10px;
+  }
+}
+@media (max-width: 520px) {
+  .page-banner-title {
+    padding: 30px 20px;
+  }
+  .page-banner-title__heading {
+    font-size: 26px;
+  }
+  .page-banner-title__caption {
+    font-size: 14px;
+  }
+}
+
+#sortBy {
+  display: none !important;
 }
