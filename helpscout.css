@@ -655,7 +655,7 @@ body #mainNav .nav li.active a {
     text-align: center;
     transform: translateX(100%);
     top: 90px;
-    margin-right: -70px;
+    margin-right: 0;
     right: 777px;
     z-index: 99;
     font-size: 40px;
@@ -677,7 +677,7 @@ body #mainNav .nav li.active a:before {
     transform: skew(334deg, 358deg);
 }
 body #mainNav .nav li.active a:after {
-    content: "Theme";
+    content: "theme collection";
 }
 body #mainNav .nav li#shopify-basics.active a:after {
   display: none;

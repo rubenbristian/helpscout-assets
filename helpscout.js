@@ -4,12 +4,41 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Add preset names
 
-  const local = document.getElementById('collection-632');
-  local.querySelector('a').innerHTML = `${local.querySelector('a').innerHTML} theme collection`;
-  const localPresets = document.createElement('span');
-  localPresets.classList.add('preset-names');
-  localPresets.innerHTML = ' Including poresets: Local, Soleway, Caffeine, Lively';
-  local.appendChild(localPresets);
+  const presetNames = {
+    'Local': 'Local, Soleway, Caffeine, Lively',
+    'Borders': 'Borders, Objekts, Readers, Folio, Mosaic',
+    'Combine': 'Combine, Gadget, Blush, Ring, Bites',
+    'Highlight': 'Highlight, Single, Brush',
+    'Split': 'Split, Drawer, Nomad',
+    'Kingdom': 'Kingdom, Queen, Prince'
+  };
+
+  const homepageCollectionTitles = document.querySelectorAll('#collection-632, #collection-759, #collection-657, #collection-370, #collection-550, #collection-463');
+  homepageCollectionTitles.forEach(title => {
+
+    title.querySelector('a').innerHTML = `${title.querySelector('a').innerHTML} theme collection`;
+
+    let selectedPreset = '';
+    if ( title.id === 'collection-632' ) {
+      selectedPreset = 'Local';
+    } else if ( title.id === 'collection-759' ) {
+      selectedPreset = 'Borders';
+    } else if ( title.id === 'collection-657' ) {
+      selectedPreset = 'Combine';
+    } else if ( title.id === 'collection-370' ) {
+      selectedPreset = 'Split';
+    } else if ( title.id === 'collection-550' ) {
+      selectedPreset = 'Highlight';
+    } else if ( title.id === 'collection-463' ) {
+      selectedPreset = 'Kingdom';
+    }
+
+    const presetNamesSpan = document.createElement('span');
+    presetNamesSpan.classList.add('preset-names');
+    presetNamesSpan.innerHTML = `Including presets: ${presetNames[selectedPreset]}`;
+
+    title.appendChild(presetNamesSpan);
+  });
 
   // continue with homepage  
 
