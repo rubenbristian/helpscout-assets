@@ -45,24 +45,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const selectedPage = document.querySelector('#mainNav li.active');
 
-  if ( selectedPage.id === 'shopify-basics' ) {
+  const collectionPageDom = document.createElement('div');
+  collectionPageDom.classList.add('page-banner-title');
 
+  if ( selectedPage.id === 'shopify-basics' ) {
+    collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Shopify basics</span><span class="page-banner-title__caption">Various tips and tricks to get you started with Shopify</span>`;
   } else {
 
     if ( selectedPage.id === 'local' ) {
-
+      collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Local theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Local']}</span>`;
     } else if ( selectedPage.id === 'borders' ) {
-
+      collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Borders theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Borders']}</span>`;
     } else if ( selectedPage.id === 'combine' ) {
-
+      collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Combine theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Combine']}</span>`;
     } else if ( selectedPage.id === 'highlight' ) {
-
+      collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Highlight theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Highlight']}</span>`;
     } else if ( selectedPage.id === 'split' ) {
-
+      collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Split theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Split']}</span>`;
     } else if ( selectedPage.id === 'kingdom' ) {
-
+      collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Kingdom theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Kingdom']}</span>`;
     }
-    
+
   }
 
   // continue with homepage  
