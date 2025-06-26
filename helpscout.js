@@ -38,7 +38,32 @@ document.addEventListener('DOMContentLoaded', function() {
     presetNamesSpan.innerHTML = `Including presets: ${presetNames[selectedPreset]}`;
 
     title.appendChild(presetNamesSpan);
+
   });
+
+  // Set inner page titles
+
+  const selectedPage = document.querySelector('#mainNav li.active');
+
+  if ( selectedPage.id === 'shopify-basics' ) {
+
+  } else {
+
+    if ( selectedPage.id === 'local' ) {
+
+    } else if ( selectedPage.id === 'borders' ) {
+
+    } else if ( selectedPage.id === 'combine' ) {
+
+    } else if ( selectedPage.id === 'highlight' ) {
+
+    } else if ( selectedPage.id === 'split' ) {
+
+    } else if ( selectedPage.id === 'kingdom' ) {
+
+    }
+    
+  }
 
   // continue with homepage  
 

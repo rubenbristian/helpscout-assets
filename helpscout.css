@@ -641,7 +641,7 @@ code, pre {
 #mainNav .nav li:first-child {
 	display: block;
 }
-
+/*
 body #mainNav .nav li.active {
   position: absolute;
   display: block;
@@ -682,7 +682,7 @@ body #mainNav .nav li.active a:after {
 body #mainNav .nav li#shopify-basics.active a:after {
   display: none;
 }
-
+*/
 
 #fullArticle pre, #fullArticle code {
   background: #f7f7f7 !important;
