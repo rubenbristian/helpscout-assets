@@ -43,6 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Set inner page titles
 
+  setTimeout(() => {
+
   const selectedPage = document.querySelector('#mainNav li.active');
 
   const collectionPageDom = document.createElement('div');
@@ -67,9 +69,11 @@ document.addEventListener('DOMContentLoaded', function() {
       collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Kingdom theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Kingdom']}</span>`;
     }
 
-  }
+    }
 
-  document.querySelector('#main-content').insertBefore(collectionPageDom, document.querySelector('#main-content').firstChild);
+    document.querySelector('#main-content').insertBefore(collectionPageDom, document.querySelector('#main-content').firstChild);
+
+  }, 150);
 
   // continue with homepage  
 
