@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if ( selectedPage.id === 'local' ) {
       collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Local theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Local']}</span>`;
+      document.querySelector('#fullArticle h1:first-child').innerHTML = `${document.querySelector('#fullArticle h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Local']}</span>`;
     } else if ( selectedPage.id === 'borders' ) {
       collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Borders theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Borders']}</span>`;
     } else if ( selectedPage.id === 'combine' ) {
