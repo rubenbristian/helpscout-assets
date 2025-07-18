@@ -1179,3 +1179,22 @@ div[class*=callout] p {
 #sortBy {
   display: none !important;
 }
+
+.collection-hero-image {
+  border-radius: 8px 8px 0 0;
+  margin: -50px -70px 50px;
+  max-width: calc(100% + 140px);
+}
+@media all and (max-width: 768px) {
+  .collection-hero-image {
+    margin: -50px -40px 30px;
+    max-width: calc(100% + 80px);
+  }
+}
+@media all and (max-width: 520px) {
+  .collection-hero-image {
+    border-radius: 8px;
+    margin: -10px 0 20px;
+    max-width: 100%;
+  }
+}

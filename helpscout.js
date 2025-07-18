@@ -45,40 +45,64 @@ document.addEventListener('DOMContentLoaded', function() {
 
   setTimeout(() => {
 
-  const selectedPage = document.querySelector('#mainNav li.active');
+    const selectedPage = document.querySelector('#mainNav li.active');
 
-  const collectionPageDom = document.createElement('div');
-  collectionPageDom.classList.add('page-banner-title');
+    const collectionPageDom = document.createElement('div');
+    collectionPageDom.classList.add('page-banner-title');
 
-  if ( selectedPage.id === 'shopify-basics' ) {
-    collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Shopify basics</span><span class="page-banner-title__caption">Various tips and tricks to get you started with Shopify</span>`;
-  } else {
+    if ( selectedPage.id === 'shopify-basics' ) {
+      collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Shopify basics</span><span class="page-banner-title__caption">Various tips and tricks to get you started with Shopify</span>`;
+    } else {
 
-    if ( selectedPage.id === 'local' ) {
-      collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Local theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Local']}</span>`;
-      document.querySelector('#main-content h1:first-child').innerHTML = `${document.querySelector('#main-content h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Local']}</span>`;
-    } else if ( selectedPage.id === 'borders' ) {
-      collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Borders theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Borders']}</span>`;
-      document.querySelector('#main-content h1:first-child').innerHTML = `${document.querySelector('#main-content h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Borders']}</span>`;
-    } else if ( selectedPage.id === 'combine' ) {
-      collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Combine theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Combine']}</span>`;
-      document.querySelector('#main-content h1:first-child').innerHTML = `${document.querySelector('#main-content h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Combine']}</span>`;
-    } else if ( selectedPage.id === 'highlight' ) {
-      collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Highlight theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Highlight']}</span>`;
-      document.querySelector('#main-content h1:first-child').innerHTML = `${document.querySelector('#main-content h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Highlight']}</span>`;
-    } else if ( selectedPage.id === 'split' ) {
-      collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Split theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Split']}</span>`;
-      document.querySelector('#main-content h1:first-child').innerHTML = `${document.querySelector('#main-content h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Split']}</span>`;
-    } else if ( selectedPage.id === 'kingdom' ) {
-      collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Kingdom theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Kingdom']}</span>`;
-      document.querySelector('#main-content h1:first-child').innerHTML = `${document.querySelector('#main-content h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Kingdom']}</span>`;
-    }
+      if ( selectedPage.id === 'local' ) {
+        collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Local theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Local']}</span>`;
+        document.querySelector('#main-content h1:first-child').innerHTML = `${document.querySelector('#main-content h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Local']}</span>`;
+      } else if ( selectedPage.id === 'borders' ) {
+        collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Borders theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Borders']}</span>`;
+        document.querySelector('#main-content h1:first-child').innerHTML = `${document.querySelector('#main-content h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Borders']}</span>`;
+      } else if ( selectedPage.id === 'combine' ) {
+        collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Combine theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Combine']}</span>`;
+        document.querySelector('#main-content h1:first-child').innerHTML = `${document.querySelector('#main-content h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Combine']}</span>`;
+      } else if ( selectedPage.id === 'highlight' ) {
+        collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Highlight theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Highlight']}</span>`;
+        document.querySelector('#main-content h1:first-child').innerHTML = `${document.querySelector('#main-content h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Highlight']}</span>`;
+      } else if ( selectedPage.id === 'split' ) {
+        collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Split theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Split']}</span>`;
+        document.querySelector('#main-content h1:first-child').innerHTML = `${document.querySelector('#main-content h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Split']}</span>`;
+      } else if ( selectedPage.id === 'kingdom' ) {
+        collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Kingdom theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Kingdom']}</span>`;
+        document.querySelector('#main-content h1:first-child').innerHTML = `${document.querySelector('#main-content h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Kingdom']}</span>`;
+      }
 
     }
 
     document.querySelector('#main-content').insertBefore(collectionPageDom, document.querySelector('#main-content').firstChild);
 
   }, 150);
+
+  // collection page banners
+
+  const collectionHeroImage = document.createElement('img');
+  collectionHeroImage.className = 'collection-hero-image';
+  if ( document.location.pathname.includes('collection/657-combine') ) {
+    collectionHeroImage.src = 'https://rubenbristian.github.io/helpscout-assets/img/combine_hero_1620.jpg';
+    document.querySelector('.contentWrapper').prepend(collectionHeroImage);
+  } else if ( document.location.pathname.includes('collection/632-local') ) {
+    collectionHeroImage.src = 'https://rubenbristian.github.io/helpscout-assets/img/local_hero_1620.jpg';
+    document.querySelector('.contentWrapper').prepend(collectionHeroImage);
+  } else if ( document.location.pathname.includes('collection/759-borders') ) {
+    collectionHeroImage.src = 'https://rubenbristian.github.io/helpscout-assets/img/borders_hero_1620.jpg';
+    document.querySelector('.contentWrapper').prepend(collectionHeroImage);
+  } else if ( document.location.pathname.includes('collection/370-split') ) {
+    collectionHeroImage.src = 'https://rubenbristian.github.io/helpscout-assets/img/split_hero_1620.jpg';
+    document.querySelector('.contentWrapper').prepend(collectionHeroImage);
+  } else if ( document.location.pathname.includes('collection/550-highlight') ) {
+    collectionHeroImage.src = 'https://rubenbristian.github.io/helpscout-assets/img/highlight_hero_1620.jpg';
+    document.querySelector('.contentWrapper').prepend(collectionHeroImage);
+  } else if ( document.location.pathname.includes('collection/463-kingdom') ) {
+    collectionHeroImage.src = 'https://rubenbristian.github.io/helpscout-assets/img/kingdom_hero_1620.jpg';
+    document.querySelector('.contentWrapper').prepend(collectionHeroImage);
+  }
 
   // continue with homepage  
 
