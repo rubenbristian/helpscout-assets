@@ -43,42 +43,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Set inner page titles
 
-  setTimeout(() => {
+  const selectedPage = document.querySelector('#mainNav li.active');
 
-    const selectedPage = document.querySelector('#mainNav li.active');
+  const collectionPageDom = document.createElement('div');
+  collectionPageDom.classList.add('page-banner-title');
 
-    const collectionPageDom = document.createElement('div');
-    collectionPageDom.classList.add('page-banner-title');
+  if ( selectedPage.id === 'shopify-basics' ) {
+    collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Shopify basics</span><span class="page-banner-title__caption">Various tips and tricks to get you started with Shopify</span>`;
+  } else {
 
-    if ( selectedPage.id === 'shopify-basics' ) {
-      collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Shopify basics</span><span class="page-banner-title__caption">Various tips and tricks to get you started with Shopify</span>`;
-    } else {
-
-      if ( selectedPage.id === 'local' ) {
-        collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Local theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Local']}</span>`;
-        document.querySelector('#main-content h1:first-child').innerHTML = `${document.querySelector('#main-content h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Local']}</span>`;
-      } else if ( selectedPage.id === 'borders' ) {
-        collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Borders theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Borders']}</span>`;
-        document.querySelector('#main-content h1:first-child').innerHTML = `${document.querySelector('#main-content h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Borders']}</span>`;
-      } else if ( selectedPage.id === 'combine' ) {
-        collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Combine theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Combine']}</span>`;
-        document.querySelector('#main-content h1:first-child').innerHTML = `${document.querySelector('#main-content h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Combine']}</span>`;
-      } else if ( selectedPage.id === 'highlight' ) {
-        collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Highlight theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Highlight']}</span>`;
-        document.querySelector('#main-content h1:first-child').innerHTML = `${document.querySelector('#main-content h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Highlight']}</span>`;
-      } else if ( selectedPage.id === 'split' ) {
-        collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Split theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Split']}</span>`;
-        document.querySelector('#main-content h1:first-child').innerHTML = `${document.querySelector('#main-content h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Split']}</span>`;
-      } else if ( selectedPage.id === 'kingdom' ) {
-        collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Kingdom theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Kingdom']}</span>`;
-        document.querySelector('#main-content h1:first-child').innerHTML = `${document.querySelector('#main-content h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Kingdom']}</span>`;
-      }
-
+    if ( selectedPage.id === 'local' ) {
+      collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Local theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Local']}</span>`;
+      document.querySelector('#main-content h1:first-child').innerHTML = `${document.querySelector('#main-content h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Local']}</span>`;
+    } else if ( selectedPage.id === 'borders' ) {
+      collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Borders theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Borders']}</span>`;
+      document.querySelector('#main-content h1:first-child').innerHTML = `${document.querySelector('#main-content h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Borders']}</span>`;
+    } else if ( selectedPage.id === 'combine' ) {
+      collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Combine theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Combine']}</span>`;
+      document.querySelector('#main-content h1:first-child').innerHTML = `${document.querySelector('#main-content h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Combine']}</span>`;
+    } else if ( selectedPage.id === 'highlight' ) {
+      collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Highlight theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Highlight']}</span>`;
+      document.querySelector('#main-content h1:first-child').innerHTML = `${document.querySelector('#main-content h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Highlight']}</span>`;
+    } else if ( selectedPage.id === 'split' ) {
+      collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Split theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Split']}</span>`;
+      document.querySelector('#main-content h1:first-child').innerHTML = `${document.querySelector('#main-content h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Split']}</span>`;
+    } else if ( selectedPage.id === 'kingdom' ) {
+      collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Kingdom theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Kingdom']}</span>`;
+      document.querySelector('#main-content h1:first-child').innerHTML = `${document.querySelector('#main-content h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Kingdom']}</span>`;
     }
 
-    document.querySelector('#main-content').insertBefore(collectionPageDom, document.querySelector('#main-content').firstChild);
+  }
 
-  }, 150);
+  document.querySelector('#main-content').insertBefore(collectionPageDom, document.querySelector('#main-content').firstChild);
 
   // collection page banners
 
@@ -130,34 +126,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Krown gallery start - search for more than 2 p siblings containing images with size set to a value smaller than 340px and wrapps them in a block element (the rest is css)
   const fullArticle = document.getElementById("fullArticle");
-  // if (!fullArticle) return;
-
-  const figures = fullArticle.querySelectorAll("figure");
-  let galleryWrapper = null;
-
-  figures.forEach((figure, index) => {
-    const widthMatch = figure.getAttribute("style")?.match(/width:\s*(\d+)px/);
-    const figureWidth = widthMatch ? parseInt(widthMatch[1], 10) : null;
-    const nextElement = figure.nextElementSibling;
-    
-    if (figureWidth !== null && figureWidth < 300) {
-      if (!galleryWrapper) {
-        galleryWrapper = document.createElement("div");
-        galleryWrapper.classList.add("krown-gallery");
-        figure.before(galleryWrapper);
-      }
-      galleryWrapper.appendChild(figure);
-
-      if (!nextElement || nextElement.tagName !== "FIGURE") {
+  if ( fullArticle ) {
+    const figures = fullArticle.querySelectorAll("figure");
+    let galleryWrapper = null;
+  
+    figures.forEach((figure, index) => {
+      const widthMatch = figure.getAttribute("style")?.match(/width:\s*(\d+)px/);
+      const figureWidth = widthMatch ? parseInt(widthMatch[1], 10) : null;
+      const nextElement = figure.nextElementSibling;
+      
+      if (figureWidth !== null && figureWidth < 300) {
+        if (!galleryWrapper) {
+          galleryWrapper = document.createElement("div");
+          galleryWrapper.classList.add("krown-gallery");
+          figure.before(galleryWrapper);
+        }
+        galleryWrapper.appendChild(figure);
+  
+        if (!nextElement || nextElement.tagName !== "FIGURE") {
+          galleryWrapper = null;
+        }
+      } else {
         galleryWrapper = null;
       }
-    } else {
-      galleryWrapper = null;
-    }
-  });
-  // Krown gallery end
-
-
+    });
+  }
+ 
 	// TOC start
   if (!window.location.href.includes("article")) return; // only do toc on article pages
 
