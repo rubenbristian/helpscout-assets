@@ -80,6 +80,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const collectionHeroImage = document.createElement('img');
   collectionHeroImage.className = 'collection-hero-image';
+  collectionHeroImage.width = '1600';
+  collectionHeroImage.height = '1100';
   if ( document.location.pathname.includes('collection/657-combine') ) {
     collectionHeroImage.src = 'https://rubenbristian.github.io/helpscout-assets/img/combine_hero_1620.jpg';
     document.querySelector('.contentWrapper').prepend(collectionHeroImage);
