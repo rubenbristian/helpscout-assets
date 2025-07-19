@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if ( selectedPage.id === 'shopify-basics' ) {
     collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Shopify basics</span><span class="page-banner-title__caption">Various tips and tricks to get you started with Shopify</span>`;
+    document.querySelector('#main-content').insertBefore(collectionPageDom, document.querySelector('#main-content').firstChild);
   } else {
 
     if ( selectedPage.id === 'local' ) {
@@ -72,9 +73,9 @@ document.addEventListener('DOMContentLoaded', function() {
       document.querySelector('#main-content h1:first-child').innerHTML = `${document.querySelector('#main-content h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Kingdom']}</span>`;
     }
 
-  }
+    document.querySelector('#main-content').insertBefore(collectionPageDom, document.querySelector('#main-content').firstChild);
 
-  document.querySelector('#main-content').insertBefore(collectionPageDom, document.querySelector('#main-content').firstChild);
+  }
 
   // collection page banners
 
@@ -84,27 +85,27 @@ document.addEventListener('DOMContentLoaded', function() {
   collectionHeroImage.height = '1100';
   collectionHeroImage.sizes = '(max-width: 768px) 100vw, (max-width: 1280px) 70vw, 840px';
   if ( document.location.pathname.includes('collection/657-combine') ) {
-    collectionHeroImage.srcset = 'https://rubenbristian.github.io/helpscout-assets/img/combine_hero_1120.jpg 1120w, https://rubenbristian.github.io/helpscout-assets/img/combine_hero_1620.jpg 1620w';
+    collectionHeroImage.srcset = 'https://rubenbristian.github.io/helpscout-assets/img/combine_hero_1160.jpg 1160w, https://rubenbristian.github.io/helpscout-assets/img/combine_hero_1620.jpg 1620w';
     collectionHeroImage.src = 'https://rubenbristian.github.io/helpscout-assets/img/combine_hero_1620.jpg';
     document.querySelector('.contentWrapper').prepend(collectionHeroImage);
   } else if ( document.location.pathname.includes('collection/632-local') ) {
-    collectionHeroImage.srcset = 'https://rubenbristian.github.io/helpscout-assets/img/local_hero_1120.jpg 1120w, https://rubenbristian.github.io/helpscout-assets/img/local_hero_1620.jpg 1620w';
+    collectionHeroImage.srcset = 'https://rubenbristian.github.io/helpscout-assets/img/local_hero_1160.jpg 1160w, https://rubenbristian.github.io/helpscout-assets/img/local_hero_1620.jpg 1620w';
     collectionHeroImage.src = 'https://rubenbristian.github.io/helpscout-assets/img/local_hero_1620.jpg';
     document.querySelector('.contentWrapper').prepend(collectionHeroImage);
   } else if ( document.location.pathname.includes('collection/759-borders') ) {
-    collectionHeroImage.srcset = 'https://rubenbristian.github.io/helpscout-assets/img/borders_hero_1120.jpg 1120w, https://rubenbristian.github.io/helpscout-assets/img/borders_hero_1620.jpg 1620w';
+    collectionHeroImage.srcset = 'https://rubenbristian.github.io/helpscout-assets/img/borders_hero_1160.jpg 1160w, https://rubenbristian.github.io/helpscout-assets/img/borders_hero_1620.jpg 1620w';
     collectionHeroImage.src = 'https://rubenbristian.github.io/helpscout-assets/img/borders_hero_1620.jpg';
     document.querySelector('.contentWrapper').prepend(collectionHeroImage);
   } else if ( document.location.pathname.includes('collection/370-split') ) {
-    collectionHeroImage.srcset = 'https://rubenbristian.github.io/helpscout-assets/img/split_hero_1120.jpg 1120w, https://rubenbristian.github.io/helpscout-assets/img/split_hero_1620.jpg 1620w';
+    collectionHeroImage.srcset = 'https://rubenbristian.github.io/helpscout-assets/img/split_hero_1160.jpg 1160w, https://rubenbristian.github.io/helpscout-assets/img/split_hero_1620.jpg 1620w';
     collectionHeroImage.src = 'https://rubenbristian.github.io/helpscout-assets/img/split_hero_1620.jpg';
     document.querySelector('.contentWrapper').prepend(collectionHeroImage);
   } else if ( document.location.pathname.includes('collection/550-highlight') ) {
-    collectionHeroImage.srcset = 'https://rubenbristian.github.io/helpscout-assets/img/highlight_hero_1120.jpg 1120w, https://rubenbristian.github.io/helpscout-assets/img/highlight_hero_1620.jpg 1620w';
+    collectionHeroImage.srcset = 'https://rubenbristian.github.io/helpscout-assets/img/highlight_hero_1160.jpg 1160w, https://rubenbristian.github.io/helpscout-assets/img/highlight_hero_1620.jpg 1620w';
     collectionHeroImage.src = 'https://rubenbristian.github.io/helpscout-assets/img/highlight_hero_1620.jpg';
     document.querySelector('.contentWrapper').prepend(collectionHeroImage);
   } else if ( document.location.pathname.includes('collection/463-kingdom') ) {
-    collectionHeroImage.srcset = 'https://rubenbristian.github.io/helpscout-assets/img/kingdom_hero_1120.jpg 1120w, https://rubenbristian.github.io/helpscout-assets/img/kingdom_hero_1620.jpg 1620w';
+    collectionHeroImage.srcset = 'https://rubenbristian.github.io/helpscout-assets/img/kingdom_hero_1160.jpg 1160w, https://rubenbristian.github.io/helpscout-assets/img/kingdom_hero_1620.jpg 1620w';
     collectionHeroImage.src = 'https://rubenbristian.github.io/helpscout-assets/img/kingdom_hero_1620.jpg';
     document.querySelector('.contentWrapper').prepend(collectionHeroImage);
   }
