@@ -637,10 +637,10 @@ code, pre {
 	display: none;
 }
 #mainNav .nav li {
-	display: none;
+	display: none !important;
 }
 #mainNav .nav li:first-child {
-	display: block;
+	display: block !important;
 }
 /*
 body #mainNav .nav li.active {
