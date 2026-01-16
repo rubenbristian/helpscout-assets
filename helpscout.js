@@ -227,4 +227,56 @@ document.addEventListener('DOMContentLoaded', function() {
   document.documentElement.style.scrollBehavior = "smooth";
 	// TOC end
 
+  // YouTube playlist injection
+  const youtubePlaylistContainer = document.getElementById('youtube-playlist');
+  if (youtubePlaylistContainer) {
+    const playlistId = 'PLxyXX15RqiwA4jeT7mEimLrth4WuVtfTd';
+    const feedUrl = 'https://www.youtube.com/feeds/videos.xml?playlist_id=' + playlistId;
+
+    fetch(feedUrl)
+      .then(function(response) {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.text();
+      })
+      .then(function(str) {
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(str, 'application/xml');
+        const entries = Array.from(xmlDoc.getElementsByTagName('entry'));
+
+        if (!entries.length) {
+          return;
+        }
+
+        const list = document.createElement('ul');
+        list.classList.add('youtube-playlist-list');
+
+        entries.forEach(function(entry) {
+          const titleEl = entry.getElementsByTagName('title')[0];
+          const linkEl = entry.getElementsByTagName('link')[0];
+          const title = titleEl ? titleEl.textContent : '';
+          const href = linkEl ? linkEl.getAttribute('href') : '';
+
+          if (!href) return;
+
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = href;
+          a.textContent = title || href;
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+
+          li.appendChild(a);
+          list.appendChild(li);
+        });
+
+        youtubePlaylistContainer.appendChild(list);
+      })
+      .catch(function(error) {
+        console.error('Error loading YouTube playlist:', error);
+        youtubePlaylistContainer.innerHTML = '<p>Sorry, the playlist could not be loaded right now.</p>';
+      });
+  }
+
 });
