@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Add preset names
 
   const presetNames = {
+    'Seventh': 'Seventh, (coming soon: Oak, Nora)',
     'Local': 'Local, Soleway, Caffeine, Lively',
     'Borders': 'Borders, Objekts, Readers, Folio, Mosaic',
     'Combine': 'Combine, Gadget, Blush, Ring, Bites',
@@ -19,7 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
     title.querySelector('a').innerHTML = `${title.querySelector('a').innerHTML} theme collection`;
 
     let selectedPreset = '';
-    if ( title.id === 'collection-632' ) {
+
+    if ( title.id === 'collection-936' ) {
+      selectedPreset = 'Seventh';
+    } else if ( title.id === 'collection-632' ) {
       selectedPreset = 'Local';
     } else if ( title.id === 'collection-759' ) {
       selectedPreset = 'Borders';
@@ -53,7 +57,11 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('#main-content').insertBefore(collectionPageDom, document.querySelector('#main-content').firstChild);
   } else {
 
-    if ( selectedPage.id === 'local' ) {
+    if ( selectedPage.id === 'seventh' ) {
+      collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Seventh theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Seventh']}</span>`;
+      document.querySelector('#main-content h1:first-child').innerHTML = `${document.querySelector('#main-content h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Seventh']}</span>`;
+      document.querySelector('#main-content').insertBefore(collectionPageDom, document.querySelector('#main-content').firstChild);
+    } else if ( selectedPage.id === 'local' ) {
       collectionPageDom.innerHTML = `<span class="page-banner-title__heading">Local theme collection</span><span class="page-banner-title__caption">Including presets: ${presetNames['Local']}</span>`;
       document.querySelector('#main-content h1:first-child').innerHTML = `${document.querySelector('#main-content h1:first-child').innerHTML} <span class="preset-names">Including presets: ${presetNames['Local']}</span>`;
       document.querySelector('#main-content').insertBefore(collectionPageDom, document.querySelector('#main-content').firstChild);
@@ -88,7 +96,11 @@ document.addEventListener('DOMContentLoaded', function() {
   collectionHeroImage.width = '1600';
   collectionHeroImage.height = '1100';
   collectionHeroImage.sizes = '(max-width: 768px) 100vw, (max-width: 1280px) 70vw, 840px';
-  if ( document.location.pathname.includes('collection/657-combine') ) {
+  if ( document.location.pathname.includes('collection/936-seventh') ) {
+    collectionHeroImage.srcset = 'https://rubenbristian.github.io/helpscout-assets/img/seventh_hero_1160.jpg 1160w, https://rubenbristian.github.io/helpscout-assets/img/seventh_hero_1620.jpg 1620w';
+    collectionHeroImage.src = 'https://rubenbristian.github.io/helpscout-assets/img/seventh_hero_1620.jpg';
+    document.querySelector('.contentWrapper').prepend(collectionHeroImage);
+  } else if ( document.location.pathname.includes('collection/657-combine') ) {
     collectionHeroImage.srcset = 'https://rubenbristian.github.io/helpscout-assets/img/combine_hero_1160.jpg 1160w, https://rubenbristian.github.io/helpscout-assets/img/combine_hero_1620.jpg 1620w';
     collectionHeroImage.src = 'https://rubenbristian.github.io/helpscout-assets/img/combine_hero_1620.jpg';
     document.querySelector('.contentWrapper').prepend(collectionHeroImage);

@@ -1002,6 +1002,9 @@ div[class*=callout] p {
 .category-list:after {
   display: none;  
 }
+#collection-category-936 .category-list:before {
+  background-image: url('https://rubenbristian.github.io/helpscout-assets/img/seventh_hero_1160.jpg');
+}
 #collection-category-632 .category-list:before {
   background-image: url('https://rubenbristian.github.io/helpscout-assets/img/local_hero_1160.jpg');
 }
@@ -1019,6 +1022,20 @@ div[class*=callout] p {
 }
 #collection-category-759 .category-list:before {
   background-image: url('https://rubenbristian.github.io/helpscout-assets/img/borders_hero_1160.jpg');
+}
+
+
+.category-list .category[href*='cards'] h3:before {
+  background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/cards.png);
+}
+.category-list .category[href*='940-sections-pages'] h3:before {
+  background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/sections-new.png);
+}
+.category-list .category[href*='blocks'] h3:before {
+  background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/blocks.png);
+}
+.category-list .category[href*='986-pages'] h3:before {
+  background-image: url(https://rubenbristian.github.io/helpscout-assets/icons/pages.png);
 }
 
 .category-list .category[href*='theme-settings'] h3:before {
