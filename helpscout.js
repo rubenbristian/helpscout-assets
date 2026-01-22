@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     'Kingdom': 'Kingdom, Queen, Prince'
   };
 
-  const homepageCollectionTitles = document.querySelectorAll('#collection-632, #collection-759, #collection-657, #collection-370, #collection-550, #collection-463');
+  const homepageCollectionTitles = document.querySelectorAll('#collection-936, #collection-632, #collection-759, #collection-657, #collection-370, #collection-550, #collection-463');
   homepageCollectionTitles.forEach(title => {
 
     title.querySelector('a').innerHTML = `${title.querySelector('a').innerHTML} theme collection`;
