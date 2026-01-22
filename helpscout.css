@@ -1232,3 +1232,9 @@ div[class*=callout] p {
     max-width: 100%;
   }
 }
+
+#fullArticle hr {
+  border-top: none !important;
+  border-bottom: 1px solid #ececec !important;
+  margin: 30px auto 30px auto !important;
+}
