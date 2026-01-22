@@ -578,8 +578,8 @@ code, pre {
 	border-radius: 10px;
 }
 #fullArticle p, #fullArticle ul, #fullArticle ol, #fullArticle li, #fullArticle div, #fullArticle blockquote, #fullArticle dd, #fullArticle table {
-	font-size: 16px;
-	line-height: 1.6em;
+	font-size: 14px;
+	line-height: 1.4em;
   color: #000;
 }
 #fullArticle h1, #fullArticle h2, #fullArticle h3, #fullArticle h4, #fullArticle h5 {
@@ -922,8 +922,11 @@ body #mainNav .nav li#shopify-basics.active a:after {
 }
 
 div[class*=callout] p {
-  font-size: 16px !important;
+  font-size: 14px !important;
   padding-top: 7px;
+}
+div[class*=callout] p:not(:last-child) {
+  margin-bottom: 14px !important;
 }
 #fullArticle h2 + h3 {
   margin-top: -4px;
@@ -1237,4 +1240,23 @@ div[class*=callout] p {
   border-top: none !important;
   border-bottom: 1px solid #ececec !important;
   margin: 30px auto 30px auto !important;
+}
+#fullArticle p + ul {
+  margin-top: -4px;
+}
+#fullArticle .callout-yellow {
+  background: #ffeecc;
+  border-color: #e09c24;
+}
+#fullArticle .callout-red {
+  background: #fedfd5;
+  border-color: #82282f;
+}
+#fullArticle .callout-blue {
+  background: #d1e8ff;
+  border-color: #66a3ff
+}
+#fullArticle .callout-green {
+  background: #e0fcde;
+  border-color: #47c47d
 }
