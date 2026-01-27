@@ -1226,3 +1226,20 @@ code.inline-code {
   padding: 4px !important;
   border-radius: 2px !important;
 }
+
+.pagination ul {
+  border: 1px solid #e9e9e9;
+  border-radius: 10px;
+  height: 30px;
+  display: inline-flex;
+}
+.pagination li.active a {
+  font-weight: bold !important;
+  color: #000 !important;
+}
+.pagination a {
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  background: none !important;
+}
