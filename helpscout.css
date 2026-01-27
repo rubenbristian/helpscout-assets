@@ -1222,3 +1222,7 @@ div[class*=callout] p:not(:last-child) {
 #hubspot-form iframe {
   border: none !important
 }
+code.inline-code {
+  padding: 4px !important;
+  border-radius: 2px !important;
+}
