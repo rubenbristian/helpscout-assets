@@ -906,15 +906,28 @@ div[class*=callout] p:not(:last-child) {
 .category-list {
     display: grid;
     grid-template-areas:
-        "image ."
-        "image ."
-        "image ."
-        "image ."
-        "image ."
-        "image .";
+      "image ."
+      "image ."
+      "image ."
+      "image ."
+      "image ."
+      "image .";
     grid-template-columns: 1fr 1fr;
     align-items: stretch;
     grid-gap: 20px;
+}
+
+@media screen and (min-width: 861px) {
+  #collection-category-936 .category-list {
+    grid-template-areas:
+      "image ."
+      "image ."
+      "image ."
+      "image ."
+      "image ."
+      "image ."
+      "image .";
+  }
 }
 @media screen and (min-width: 861px) {
   #collection-category-370 .category-list {
