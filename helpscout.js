@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	var elContentArea = document.getElementById('contentArea');
   
   // Add preset names
+  
 
   const presetNames = {
     'Seventh': 'Seventh, (coming soon: Oak, Nora)',
@@ -89,41 +90,116 @@ document.addEventListener('DOMContentLoaded', function() {
 
   }
 
-  // collection page banners
+  // collection page banners & category blocks
 
-  const collectionHeroImage = document.createElement('img');
-  collectionHeroImage.className = 'collection-hero-image';
-  collectionHeroImage.width = '1600';
-  collectionHeroImage.height = '1100';
-  collectionHeroImage.sizes = '(max-width: 768px) 100vw, (max-width: 1280px) 70vw, 840px';
-  if ( document.location.pathname.includes('collection/936-seventh') ) {
-    collectionHeroImage.srcset = 'https://rubenbristian.github.io/helpscout-assets/img/seventh_hero_1160.jpg 1160w, https://rubenbristian.github.io/helpscout-assets/img/seventh_hero_1620.jpg 1620w';
-    collectionHeroImage.src = 'https://rubenbristian.github.io/helpscout-assets/img/seventh_hero_1620.jpg';
-    document.querySelector('.contentWrapper').prepend(collectionHeroImage);
-  } else if ( document.location.pathname.includes('collection/657-combine') ) {
-    collectionHeroImage.srcset = 'https://rubenbristian.github.io/helpscout-assets/img/combine_hero_1160.jpg 1160w, https://rubenbristian.github.io/helpscout-assets/img/combine_hero_1620.jpg 1620w';
-    collectionHeroImage.src = 'https://rubenbristian.github.io/helpscout-assets/img/combine_hero_1620.jpg';
-    document.querySelector('.contentWrapper').prepend(collectionHeroImage);
-  } else if ( document.location.pathname.includes('collection/632-local') ) {
-    collectionHeroImage.srcset = 'https://rubenbristian.github.io/helpscout-assets/img/local_hero_1160.jpg 1160w, https://rubenbristian.github.io/helpscout-assets/img/local_hero_1620.jpg 1620w';
-    collectionHeroImage.src = 'https://rubenbristian.github.io/helpscout-assets/img/local_hero_1620.jpg';
-    document.querySelector('.contentWrapper').prepend(collectionHeroImage);
-  } else if ( document.location.pathname.includes('collection/759-borders') ) {
-    collectionHeroImage.srcset = 'https://rubenbristian.github.io/helpscout-assets/img/borders_hero_1160.jpg 1160w, https://rubenbristian.github.io/helpscout-assets/img/borders_hero_1620.jpg 1620w';
-    collectionHeroImage.src = 'https://rubenbristian.github.io/helpscout-assets/img/borders_hero_1620.jpg';
-    document.querySelector('.contentWrapper').prepend(collectionHeroImage);
-  } else if ( document.location.pathname.includes('collection/370-split') ) {
-    collectionHeroImage.srcset = 'https://rubenbristian.github.io/helpscout-assets/img/split_hero_1160.jpg 1160w, https://rubenbristian.github.io/helpscout-assets/img/split_hero_1620.jpg 1620w';
-    collectionHeroImage.src = 'https://rubenbristian.github.io/helpscout-assets/img/split_hero_1620.jpg';
-    document.querySelector('.contentWrapper').prepend(collectionHeroImage);
-  } else if ( document.location.pathname.includes('collection/550-highlight') ) {
-    collectionHeroImage.srcset = 'https://rubenbristian.github.io/helpscout-assets/img/highlight_hero_1160.jpg 1160w, https://rubenbristian.github.io/helpscout-assets/img/highlight_hero_1620.jpg 1620w';
-    collectionHeroImage.src = 'https://rubenbristian.github.io/helpscout-assets/img/highlight_hero_1620.jpg';
-    document.querySelector('.contentWrapper').prepend(collectionHeroImage);
-  } else if ( document.location.pathname.includes('collection/463-kingdom') ) {
-    collectionHeroImage.srcset = 'https://rubenbristian.github.io/helpscout-assets/img/kingdom_hero_1160.jpg 1160w, https://rubenbristian.github.io/helpscout-assets/img/kingdom_hero_1620.jpg 1620w';
-    collectionHeroImage.src = 'https://rubenbristian.github.io/helpscout-assets/img/kingdom_hero_1620.jpg';
-    document.querySelector('.contentWrapper').prepend(collectionHeroImage);
+  const themeCollections = {
+    'seventh': {
+      path: 'collection/936-seventh',
+      hero: 'seventh_hero',
+      categories: [
+        { name: 'Theme Settings', url: '/category/939-theme-settings' },
+        { name: 'Header & Footer', url: '/category/987-header-footer' },
+        { name: 'Sections', url: '/category/940-sections-pages' },
+        { name: 'Cards', url: '/category/985-cards' },
+        { name: 'Blocks', url: '/category/941-cards-blocks' },
+        { name: 'Pages', url: '/category/986-pages' },
+        { name: 'Video Guides', url: '/category/988-video-guides' }
+      ]
+    },
+    'local': {
+      path: 'collection/632-local',
+      hero: 'local_hero',
+      categories: [
+        { name: 'Theme Settings', url: '/category/791-theme-settings' },
+        { name: 'Header & Footer', url: '/category/797-header-footer' },
+        { name: 'Products & Collections', url: '/category/802-products-collections' },
+        { name: 'Sections & Pages', url: '/category/807-sections-pages' },
+        { name: 'Video Guides', url: '/category/851-video-guides' },
+        { name: 'FAQ', url: '/category/895-faq' }
+      ]
+    },
+    'borders': {
+      path: 'collection/759-borders',
+      hero: 'borders_hero',
+      categories: [
+        { name: 'Theme Settings', url: '/category/765-theme-settings' },
+        { name: 'Header & Footer', url: '/category/766-header-footer' },
+        { name: 'Products & Collections', url: '/category/763-products-collections' },
+        { name: 'Sections & Pages', url: '/category/762-sections' },
+        { name: 'Video Guides', url: '/category/869-video-guides' }
+      ]
+    },
+    'combine': {
+      path: 'collection/657-combine',
+      hero: 'combine_hero',
+      categories: [
+        { name: 'Theme Settings', url: '/category/812-theme-settings' },
+        { name: 'Header & Footer', url: '/category/818-header-footer' },
+        { name: 'Products & Collections', url: '/category/822-product-collections' },
+        { name: 'Sections & Pages', url: '/category/826-sections-pages' },
+        { name: 'Video Guides', url: '/category/852-video-guides' },
+        { name: 'FAQ', url: '/category/892-faq' }
+      ]
+    },
+    'split': {
+      path: 'collection/370-split',
+      hero: 'split_hero',
+      categories: [
+        { name: 'Theme Settings', url: '/category/853-theme-settings' },
+        { name: 'Sections & Pages', url: '/category/859-sections-pages' },
+        { name: 'Header & Footer', url: '/category/858-header-footer' },
+        { name: 'Video Guides', url: '/category/862-video-guides' }
+      ]
+    },
+    'highlight': {
+      path: 'collection/550-highlight',
+      hero: 'highlight_hero',
+      categories: [
+        { name: 'Theme Settings', url: '/category/840-theme-settings' },
+        { name: 'Sections & Pages', url: '/category/845-sections-pages' },
+        { name: 'Video Guides', url: '/category/849-video-guides' }
+      ]
+    },
+    'kingdom': {
+      path: 'collection/463-kingdom',
+      hero: 'kingdom_hero',
+      categories: [
+        { name: 'Theme Settings', url: '/category/829-theme-settings' },
+        { name: 'Sections & Pages', url: '/category/836-sections-pages' },
+        { name: 'Video Guides', url: '/category/850-video-guides' }
+      ]
+    }
+  };
+  
+  const baseUrl = 'https://rubenbristian.github.io/helpscout-assets/img/';
+  const contentWrapper = document.querySelector('.contentWrapper');
+  
+  const currentTheme = Object.values(themeCollections).find(
+    theme => document.location.pathname.includes(theme.path)
+  );
+  
+  if (currentTheme && contentWrapper) {
+  
+    // Hero image
+    const collectionHeroImage = document.createElement('img');
+    collectionHeroImage.className = 'collection-hero-image';
+    collectionHeroImage.width = '1600';
+    collectionHeroImage.height = '1100';
+    collectionHeroImage.sizes = '(max-width: 768px) 100vw, (max-width: 1280px) 70vw, 840px';
+    collectionHeroImage.srcset = `${baseUrl}${currentTheme.hero}_1160.jpg 1160w, ${baseUrl}${currentTheme.hero}_1620.jpg 1620w`;
+    collectionHeroImage.src = `${baseUrl}${currentTheme.hero}_1620.jpg`;
+    contentWrapper.prepend(collectionHeroImage);
+  
+    // Categories
+    if (currentTheme.categories.length) {
+      const categoriesDiv = document.createElement('div');
+      categoriesDiv.className = 'collection-hero-categories';
+      categoriesDiv.innerHTML = currentTheme.categories.map(cat =>
+        `<a class="category" href="${cat.url}"><h3>${cat.name}</h3></a>`
+      ).join('');
+      contentWrapper.appendChild(categoriesDiv);
+    }
+  
   }
 
   // continue with homepage  
