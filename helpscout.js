@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
       categoriesDiv.innerHTML = currentTheme.categories.map(cat =>
         `<a class="category" href="${cat.url}"><h3>${cat.name}</h3></a>`
       ).join('');
-      contentWrapper.appendChild(categoriesDiv);
+      collectionHeroImage.after(categoriesDiv);
     }
   
   }
