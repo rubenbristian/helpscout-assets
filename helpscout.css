@@ -1316,3 +1316,7 @@ code.inline-code {
 .collection-hero-categories .category p {
   display: none;
 }
+#fullArticle .callout-blue img {
+  margin: -7px 0 17px 0px !important;
+  border-color: #66a3ff1a !important;
+}
