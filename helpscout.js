@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
 
   const presetNames = {
-    'Seventh': 'Seventh, (coming soon: Oak, Nora)',
+    'Seventh': 'Seventh, Nora, Oak',
     'Local': 'Local, Soleway, Caffeine, Lively',
     'Borders': 'Borders, Objekts, Readers, Folio, Mosaic',
     'Combine': 'Combine, Gadget, Blush, Ring, Bites',
