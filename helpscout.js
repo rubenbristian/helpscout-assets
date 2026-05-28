@@ -221,9 +221,13 @@ document.addEventListener('DOMContentLoaded', function() {
 	elContentArea.insertBefore(elMessage, document.getElementsByTagName('footer')[0]);
 
 	var elLink = document.createElement('li');
-	elLink.innerHTML = '<a href="https://contact.krownthemes.com/" class="ct-button" style="cursor:pointer;" >CONTACT US</a>';
+	elLink.innerHTML = '<a id="navigation-contact-us" href="https://contact.krownthemes.com/" class="ct-button" style="cursor:pointer;background:#fff;color:#000 !important;margin-left: 20px;">CONTACT <span>US</span></a>';
+
+	var elLink2 = document.createElement('li');
+	elLink2.innerHTML = '<a id="navigation-shopify-themes" href="https://krownthemes.com/" class="ct-button" style="cursor:pointer;">SHOPIFY THEMES</a>';
 
 	var elNav = document.getElementsByClassName('nav')[0];
+	elNav.insertBefore(elLink2, elNav.firstChild);
 	elNav.insertBefore(elLink, elNav.firstChild);
 
   // Krown gallery start - search for more than 2 p siblings containing images with size set to a value smaller than 340px and wrapps them in a block element (the rest is css)

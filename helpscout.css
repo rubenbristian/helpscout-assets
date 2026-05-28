@@ -655,7 +655,7 @@ code, pre {
 #mainNav .nav li {
 	display: none !important;
 }
-#mainNav .nav li:first-child {
+#mainNav .nav li:nth-child(-n + 2) {
 	display: block !important;
 }
 
@@ -794,6 +794,17 @@ code, pre {
     bottom: 15px;
   }
 
+  #navigation-contact-us a {
+    height: 38px;
+    line-height: 40px !important;
+    margin-top: -5px;
+  }
+  #navigation-contact-us a span {
+    display: none;
+  }
+  #navigation-shopify-themes {
+    display: none;
+  }
 }
 
 @media all and (max-width: 520px) {
