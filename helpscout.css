@@ -420,7 +420,7 @@ code, pre {
 }
 #sidebar #searchBar .search-query:placeholder-shown {
   color: #979797;
-  border-color: #dedede; !important
+  border-color: #dedede !important;
 }
 #sidebar #searchBar .search-query::placeholder {
   opacity: 1 !important;
@@ -1059,7 +1059,9 @@ div[class*=callout] p:not(:last-child) {
 #Get-the-latest--greatest-with-one-click-theme-updates-5gPKu ~ p a,
 #Assign-multiple-images-for-unique-variants-lBNRx ~ p a,
 #The-easiest-way-to-duplicate-your-Shopify-store-nO49L ~ p a,
-#Our-recommendation-Consentmo-GDPR-Compliance-E7JL9 ~ p a
+#Our-recommendation-Consentmo-GDPR-Compliance-E7JL9 ~ p a,
+#The-easiest-way-to-bulk-edit-products-in-Shopify-puPrX ~ p a,
+#An-easy-way-to-improve-image-optimization-SEO-and-store-performance-EFzcr ~ p a
 {
   border-radius: 3px;
   background: #000;
