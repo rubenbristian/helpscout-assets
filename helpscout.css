@@ -46,6 +46,8 @@ ul li ul, ul li ol, ol li ol, ol li ul {
 }
 .navbar .nav {
 	bottom: 10px;
+	display: flex;
+	gap: 10px;
 }
 .navbar .nav li a {
 	color: #111;
@@ -109,16 +111,16 @@ ul li ul, ul li ol, ol li ol, ol li ul {
   color: #f4f4f4;
   font-weight: 400;
   position: relative;
-  max-width: 1180px;
-  width: calc(100% - 96px);
+  max-width: 1570px;
+  width: calc(100% - 120px);
   margin: 90px auto 40px;
   font-size: 40px;
   line-height: 44px;
   text-align: left;
 }
 #searchBar {
-  width: calc(100% - 96px);
-	max-width: 1180px;
+  width: calc(100% - 120px);
+	max-width: 1570px;
 	padding: 0;
 	margin: 0 auto 80px;
 	text-align: left;
@@ -207,8 +209,8 @@ ul li ul, ul li ol, ol li ol, ol li ul {
 /* General structure */
 
 .container-fluid {
-  max-width: 1180px;
-  width: calc(100% - 96px);
+  max-width: 1570px;
+  width: calc(100% - 120px);
 }
 #contentArea {
   width: 100%;
@@ -218,14 +220,42 @@ ul li ul, ul li ol, ol li ol, ol li ul {
   flex-direction: column;
 }
 #contentArea > .row-fluid {
-	max-width: 1180px;
-  width: calc(100% - 96px);
+	max-width: 1570px;
+  width: calc(100% - 120px);
 	margin: auto;
+}
+@media screen and (max-width: 1023px) {
+  #contentArea > .row-fluid,
+  .container-fluid,
+  #docsSearch h1,
+  #searchBar,
+  footer,
+  #help-message,
+  .collection-category {
+    width: calc(100% - 60px);
+  }
+  #welcome {
+    padding: 60px 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #contentArea > .row-fluid,
+  .container-fluid,
+  #docsSearch h1,
+  #searchBar,
+  footer,
+  #help-message,
+  .collection-category {
+    width: calc(100% - 40px);
+  }
+  #welcome {
+    padding: 60px 20px;
+  }
 }
 
 footer {
-  max-width: 1180px;
-  width: calc(100% - 96px);
+  max-width: 1570px;
+  width: calc(100% - 120px);
   margin: 80px auto 50px;
 }
 
@@ -235,8 +265,8 @@ footer {
   padding: 50px 60px;
   box-sizing: border-box;
   border-radius: 10px;
-	max-width: 1180px;
-  width: calc(100% - 96px);
+	max-width: 1570px;
+  width: calc(100% - 120px);
 	margin: auto;
 	margin-top: 100px;
   display: flex;
@@ -284,7 +314,7 @@ footer {
   box-sizing: border-box;
 }
 #welcome > div {
-  max-width: 1180px;
+  max-width: 1570px;
   width: 100%;
   margin: auto;
   font-size: 16px;
@@ -307,9 +337,9 @@ footer {
 }
 
 .collection-category {
-  max-width: 1180px;
+  max-width: 1570px;
   margin: auto;
-  width: calc(100% - 96px);
+  width: calc(100% - 120px);
   margin-top: 80px;
 }
 .collection-category .category-list {
@@ -665,6 +695,9 @@ code, pre {
   font-family: monospace !important;
   border: none !important
 }
+#fullArticle pre strong {
+  color: #fff !important;
+}
 #fullArticle img, #fullArticle iframe, #fullArticle video {
 	padding: 4px;
 	border: 1px solid #d8d8d8 !important;
@@ -718,24 +751,11 @@ code, pre {
   }
   .navbar .nav {
     text-align: right;
+    justify-content: flex-end;
   }
 
   #docsSearch {
     margin: 0;
-  }
-  #docsSearch h1,
-  #searchBar,
-  .container-fluid,
-  footer,
-  #help-message,
-  .collection-category {
-    width: calc(100% - 60px);
-  }
-  #contentArea > .row-fluid {
-    width: calc(100% - 100px);
-  }
-  #welcome {
-    padding: 60px 30px
   }
   body {
     overflow-x: hidden;
