@@ -685,7 +685,7 @@ code, pre {
 #mainNav .nav li {
 	display: none !important;
 }
-#mainNav .nav li:nth-child(-n + 2) {
+#mainNav .nav li:not([id]) {
 	display: block !important;
 }
 
@@ -1278,6 +1278,10 @@ div[class*=callout] p:not(:last-child) {
 
 #hubspot-form iframe {
   border: none !important
+}
+div#kapa-widget-container {
+  z-index: 999;
+  position: relative;
 }
 code.inline-code {
   padding: 4px !important;
